@@ -19,7 +19,8 @@ html {
 body {
   display: grid;
   align-items: center;
-  padding: 0 2rem;
+  height: 100vh;
+  padding: 2rem;
   background-image: linear-gradient(
     to bottom,
     var(--soft-violet),
@@ -46,26 +47,37 @@ h1 {
   background-color: white;
   padding: 12rem 2rem 2rem 2rem;
   border-radius: 1.5rem;
+  margin-top: 5rem;
   position: relative;
-  margin-top: 15rem;
 }
 
-.image {
+.image__woman {
   position: absolute;
   top: -11rem;
   right: 4.5rem;
+  z-index: 9999;
+}
+
+.image__pattern {
+  position: absolute;
+  top: -1rem;
+  right: 5rem;
+  z-index: 99;
+}
+
+.image__desktop-pattern {
+  display: none;
 }
 
 hr {
   border: solid 0.01rem;
   color: var(--divider);
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 }
 
 .question__container {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
 }
 
 .question {
@@ -73,6 +85,48 @@ hr {
 }
 
 .answer {
-  width: 90%;
-  /* display: none; */
+  width: 80%;
+  display: none;
+}
+
+.footer {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    padding: 7rem 7rem 5rem 0;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  .container {
+    width: 50%;
+  }
+
+  .image__woman {
+    position: absolute;
+    width: 50%;
+    top: 5rem;
+    left: -10rem;
+  }
+
+  .image__pattern {
+    display: none;
+  }
+
+  .image__desktop-pattern {
+    position: absolute;
+    width: 45%;
+    top: -2rem;
+    left: -10rem;
+  }
 }
